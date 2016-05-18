@@ -1,0 +1,68 @@
+
+input.centerText{
+    text-align: center;
+}
+
+.imagen{
+	width: 150px;
+	height: 150px;
+	
+}
+
+.imagen2{
+	width: 80px;
+	height: 80px;
+	text-align: left;
+	
+}
+
+.centerImg{
+	display:block;
+	text-align: center;
+
+}
+
+.label{
+	text-align: center;
+}
+
+.centerText{
+	text-align: center;
+}
+
+
+
+
+.ui-page .ui-content{
+background-color: rgba(224,242,241,0.5);
+background-repeat: repeat; 
+
+
+background-attachment : scroll ; 
+
+}
+
+.tituloFooter{
+	color: rgb(255,255,255);
+}
+.tituloAca{
+	color: rgb(40,40,40);
+	
+}
+.errorAlert{
+	color: rgb(255,255,255);
+}
+
+.bienAlert{
+	color: rgb(255,255,255);
+	font-size: 24px;
+}
+
+#iniSe{
+	font-size: 28px;
+}
+
+.tituloIndex{
+	color: rgb(255,255,255);
+}
+

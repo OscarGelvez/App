@@ -1,0 +1,189 @@
+<!--/**
+  * .............................................
+  * UNIVERSIDAD  FRANCISCO  DE  PAULA  SANTANDER
+  *    PROGRAMA  DE  INGENIERIA   DE   SISTEMAS
+  *        DESARROLLO DE APLICACION MOVIL 
+  *              "ACADEMICAPP"
+  *          SAN JOSE DE CUCUTA-2016
+  * ............................................
+  */
+
+  /**
+  * @author OSCAR ANDRES GELVEZ SOLER     1150973
+  * @author KELLY JOHANA SEPÚLVEDA VERA   1150144
+  * @author MANUEL ELISEO OSORIO JAIMES   1150715
+  */
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content= "width=device-width, initial-scale=1.0, maximum-scale=2" />
+  <title>AcademicApp</title>
+  <!--<link rel="stylesheet" type="text/css" href="css/style.css"> -->
+
+
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="css/generated/jquery.mobile.flatui.css" />
+  <link rel="stylesheet" type="text/css" href="css/style2.css">
+
+  <script src="js/jquery-2.2.3.js"></script>
+
+  <script src="js/jquery.mobile-1.4.5.min.js"></script>
+  <script>
+var root = "Servidor/app.php"; //Cambiar por la ruta raiz
+</script>
+
+</head>
+<body>
+	<!-- //////////////////////////////////////Pag. GRADOS////////////////////////////////////////// -->
+
+  <div data-role="page" data-theme="b" id="Grado_pag">
+
+    <div data-role="header">
+
+      <h1 class="tituloAca">AcademicApp</h1>
+            
+    
+        <a href="index.html" rel="external"  class="ui-btn ui-shadow ui-btn-corner-all ui-btn-right ui-mini ui-btn-inline ui-btn-icon-notext ui-icon-power"></a>
+         
+    </div>
+    <div data-role="content" data-theme="a" id = "background">
+    
+     <h2 class="centerText">GRADOS</h2>
+
+
+     <div data-role="fieldcontain" id="GradosColegio">
+     </div>
+     <br>
+     <a href="#Area_pag" data-role="button" data-transition="fade" class="centerText" data-theme="f" onclick="cargarAreas()" data-icon="arrow-r"  data-iconpos="right">Continuar</a>
+    </div>
+     <div data-role="footer" data-position="fixed">
+      <h5 class="tituloFooter" >AcademicApp UFPS 2016</h5>
+    </div>
+    
+  </div>
+
+  <!-- //////////////////////////////////////Pag. ÁREAS////////////////////////////////////////// -->
+
+  <div data-role="page" data-theme="b" id="Area_pag">
+
+    <div data-role="header" data-position="fixed">
+      <a href="#Grado_pag" class="ui-btn-left ui-btn ui-shadow  ui-btn-inline ui-mini ui-corner-all ui-btn-icon-notext ui-icon-arrow-l"
+      onclick="limpiarVista(AreasColegio)">Regresar</a>
+      <h1 class="tituloAca">AcademicApp</h1>
+      <a href="index.html" rel="external"  class="ui-btn ui-shadow ui-btn-corner-all ui-btn-right ui-mini ui-btn-inline ui-btn-icon-notext ui-icon-power"></a>
+    </div>
+    <div data-role="content" data-theme="a" >
+
+
+      <h2 class="centerText">Áreas</h2>
+
+
+      <div data-role="fieldcontain" id="AreasColegio" >
+
+      </div>
+      <br>
+      <a href="#Asignatura_pag" data-role="button" data-transition="fade" class="centerText" data-theme="f" onclick="cargarAsignaturas()" data-icon="arrow-r"  data-iconpos="right">Continuar</a>
+    </div>
+
+    <div data-role="footer"  data-position="fixed">
+      <h5 class="tituloFooter" >AcademicApp UFPS 2016</h5>
+    </div>
+    
+  </div>
+
+  <!-- //////////////////////////////////////Pag. ASIGNATURAS////////////////////////////////////////// -->
+
+  <div data-role="page" data-theme="b" id="Asignatura_pag">
+
+    <div data-role="header" >
+      <a href="#Area_pag" class="ui-btn-left ui-btn ui-shadow  ui-btn-inline ui-mini ui-corner-all ui-btn-icon-notext ui-icon-arrow-l"
+      onclick="limpiarVista(AsigColegio)">Regresar</a>
+      <h1 class="tituloAca">AcademicApp</h1>
+      <a href="index.html" rel="external"  class="ui-btn ui-shadow ui-btn-corner-all ui-btn-right ui-mini ui-btn-inline ui-btn-icon-notext ui-icon-power"></a>
+    </div>
+    <div data-role="content" data-theme="a">
+
+
+      <h2 class="centerText">Asignaturas</h2>
+
+
+      <div data-role="fieldcontain" id="AsigColegio">
+
+      </div>
+      <br>
+      <a href="#Indicadores_pag" data-role="button" data-transition="fade" class="centerText" data-theme="f" onclick="cargarIndicadores()" data-icon="arrow-r"  data-iconpos="right" data-position="fixed">Continuar</a>
+    </div>
+
+    <div data-role="footer" class="tituloFooter" data-position="fixed">
+      <h5 class="tituloFooter" >AcademicApp UFPS 2016</h5>
+    </div>
+    
+  </div>
+
+
+  <!-- //////////////////////////////////////Pag. INDICADORES////////////////////////////////////////// -->
+
+  <div data-role="page" data-theme="b" id="Indicadores_pag">
+
+    <div data-role="header">
+      <a href="#Asignatura_pag" class="ui-btn-left ui-btn ui-shadow  ui-btn-inline ui-mini ui-corner-all ui-btn-icon-notext ui-icon-arrow-l" onclick="limpiarVista(IndicColegio)">Regresar</a>
+      <h1 class="tituloAca">AcademicApp</h1>
+      <a href="index.html" rel="external"  class="ui-btn ui-shadow ui-btn-corner-all ui-btn-right ui-mini ui-btn-inline ui-btn-icon-notext ui-icon-power"></a>
+    </div>
+    <div data-role="content" data-theme="a">
+
+
+      <h2 class="centerText">Indicadores</h2>
+
+
+      <div data-role="fieldcontain" id="IndicColegio">
+
+      </div>
+      <br>
+      <a href="#Apps_pag" data-role="button" data-transition="fade" class="centerText" data-theme="f" onclick="cargarApps()" data-icon="arrow-r"  data-iconpos="right">Continuar</a>
+    </div>
+
+    <div data-role="footer" class="tituloFooter" data-position="fixed">
+      <h5 class="tituloFooter" >AcademicApp UFPS 2016</h5>
+    </div>
+    
+  </div>
+
+  <!-- //////////////////////////////////////Pag. APPS RELACIONADAS////////////////////////////////////////// -->
+
+  <div data-role="page" data-theme="b" id="Apps_pag">
+
+    <div data-role="header">
+      <a href="#Indicadores_pag" class="ui-btn-left ui-btn ui-shadow  ui-btn-inline ui-mini ui-corner-all ui-btn-icon-notext ui-icon-arrow-l" onclick="limpiarVista2(caja1,caja2)">Regresar</a>
+      <h1 class="tituloAca">AcademicApp</h1>
+      <a href="index.html" rel="external"  class="ui-btn ui-shadow ui-btn-corner-all ui-btn-right ui-mini ui-btn-inline ui-btn-icon-notext ui-icon-power"></a>
+    </div>
+    <div data-role="content" data-theme="a">
+
+
+      <h2 class="centerText">Aplicaciones Relacionadas</h2>
+      <div id="caja1"></div>
+
+			<h3>Aplicaciones:</h3>
+			<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="c" id="caja2"></ul>
+
+    </div> <!--div del content-->
+  
+
+  <div data-role="footer" data-position="fixed">
+    <h5 class="tituloFooter">AcademicApp UFPS 2016</h5>
+  </div>
+  
+</div>
+
+
+
+
+<script src="js/estudiante.js"></script>
+<script src="js/usuario.js"></script>
+
+</body>
+</html>
